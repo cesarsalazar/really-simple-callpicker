@@ -1,7 +1,7 @@
 xml.instruct! :xml, :version => "1.0"
 xml.Response do
   xml.Say "Hello Monkey"
-  xml.Gather(:numDigits => "1", :action => "/real", :method => "POST") do
-    xml.Say "To speak to a real monkey, press 1.  Press any other key to start over."
+  xml.Gather(:numDigits => "1", :action => "/menu", :method => "POST") do
+    xml.Say "Thank you for calling Yondify. To record a voice mail, press 1. To speak to our CEO, press 2. Please consider that even though he really likes to talk to people, he might not be available at the moment. Press any other key to listen to this menu all over again."
   end
 end

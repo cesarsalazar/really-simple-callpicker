@@ -8,7 +8,24 @@ post '/' do
   builder :index
 end
 
-post '/real' do
+post '/menu' do
   content_type 'text/xml'
-  builder :real
+  option = params['Digits'] case
+  when option == "1"
+    builder :voice_mail
+  when option == "2"
+    builder :call
+  else
+    builder :index
+  end
+end
+
+post '/voice_mail' do
+  content_type 'text/xml'
+  builder :voice_mail
+end
+
+post '/recording_success' do
+  content_type 'text/xml'
+  builder :recording_success
 end
