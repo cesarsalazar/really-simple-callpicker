@@ -10,14 +10,14 @@ end
 
 post '/menu' do
   content_type 'text/xml'
-  option = params['Digits'] case
-  when option == "1"
-    builder :voice_mail
-  when option == "2"
-    builder :call
-  else
-    builder :index
-  end
+  case params['Digits'] 
+    when "1"
+      builder :voice_mail
+    when "2"
+      builder :call
+    else
+      builder :index
+    end
 end
 
 post '/voice_mail' do
