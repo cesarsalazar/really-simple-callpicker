@@ -7,3 +7,8 @@ post '/' do
   content_type 'text/xml'
   builder :index
 end
+
+post 'real' do
+  content_type 'text/xml'
+  builder :real
+end
