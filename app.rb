@@ -25,7 +25,7 @@ post '/voice_mail' do
   builder :voice_mail
 end
 
-post '/recording_success' do
+post '/success' do
   content_type 'text/xml'
-  builder :recording_success
+  builder :success
 end
